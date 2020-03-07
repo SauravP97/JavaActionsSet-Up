@@ -25,9 +25,7 @@ jobs:
       
     # Runs a single command using the runners shell
     - name: Compile a Java Script
-      run: |
-	javac SecondAction.java,
-	java SecondAction.
+      run: echo Hii Saurav
       
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
