@@ -26,7 +26,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Compile a Java Script
       run: |
-	sudo javac SecondAction.java,
+	javac SecondAction.java,
 	java SecondAction.
       
     # Runs a set of commands using the runners shell
