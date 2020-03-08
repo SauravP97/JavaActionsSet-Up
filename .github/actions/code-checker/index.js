@@ -14,6 +14,7 @@ function checkCodeCorrectness(i, j){
 	}
 	else{
 		if(j==1){
+			console.log("\n");
 			console.log('Running for Problem '+i);
 		}
 		fs.readFile('./././Outputs/'+opFolder+'/'+opFile, (err, data) => {
@@ -47,6 +48,7 @@ function checkTestCase(outputString, correctOutputString){
 	correctOutputString = correctOutputString.trim();
 
 	if(outputString.length != correctOutputString.length){
+		console.log("\n");
 		console.log("Expected Outpu: "+correctOutputString);
 		console.log("Your Code Output: "+outputString);
 		return "Test Case Failed";
