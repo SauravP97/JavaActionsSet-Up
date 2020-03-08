@@ -59,6 +59,8 @@ function checkTestCase(outputString, correctOutputString){
 		var char1 = correctOutputString.charAt(i);
 		var char2 = outputString.charAt(i);
 		if(char1 != char2){
+			console.log("Expected Outpu: "+correctOutputString);
+                	console.log("Your Code Output: "+outputString);
 			return "Test Case Failed";
 		}
 		i++;
