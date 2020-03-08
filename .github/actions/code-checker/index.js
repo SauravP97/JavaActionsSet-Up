@@ -21,7 +21,7 @@ function checkTestCase(){
 	correctOutputString = correctOutputString.trim();
 
 	if(outputString.length != correctOutputString.length){
-		return "Test Case Failed":
+		return "Test Case Failed";
 	}
 
 	var failed = false;
