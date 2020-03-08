@@ -17,7 +17,7 @@ function checkCodeCorrectness(i, j){
 		if(j==1){
 			console.log('Running for Problem '+i);
 		}
-		fs.readFile('./../../../Outputs/'+opFolder+'/'+opFile, (err, data) => {
+		fs.readFile('./././Outputs/'+opFolder+'/'+opFile, (err, data) => {
 			if(err){
 				return;
 			}
