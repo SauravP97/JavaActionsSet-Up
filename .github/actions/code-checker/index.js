@@ -39,4 +39,4 @@ function checkTestCase(){
 	return "Test Case Passes";
 }
 
-checkTestCase();
+console.log(checkTestCase());
