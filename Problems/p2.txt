@@ -1,0 +1,3 @@
+Problem Name : Anagrams
+
+For given pair of Strings check whether that pair is an Anagram or not
