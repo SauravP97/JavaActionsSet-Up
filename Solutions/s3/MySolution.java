@@ -4,7 +4,7 @@ import java.io.*;
 
 class MySolution{
         public static void main(String[] args) throws java.lang.Exception{
-                BufferedReader objReader = new BufferedReader(new FileReader("../../testCases/t3/t3_4.txt"));
+                BufferedReader objReader = new BufferedReader(new FileReader("../../testCases/t3/t3_2.txt"));
                 String str1 = objReader.readLine();
                 String[] strs1 = str1.split(" ");
 		int[] arr = new int[5];
@@ -13,10 +13,10 @@ class MySolution{
 			arr[i] = Integer.parseInt(strs1[i]);
 		}
 
-		//Arrays.sort(arr);
+		Arrays.sort(arr);
                 StringBuilder sb = new StringBuilder();
 
-                FileWriter writer = new FileWriter("../../Outputs/o3/o3_4.txt");  
+                FileWriter writer = new FileWriter("../../Outputs/o3/o3_2.txt");  
                 PrintWriter buffer = new PrintWriter(writer);
 
                 long maxSum = 0;
