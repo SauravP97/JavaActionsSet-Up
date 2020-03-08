@@ -1,21 +1,43 @@
 console.log('Hello World');
 
-function checkTestCase(){
+function cheeckCodeCorrectness(){
+	const fs = require('fs');
+	var i = 1;
+	while(true){
+		var j = 1;
+		console.log('Checking For Problem '+i);
+		while(true){
+			var opFolder = "o"+i;
+			var opFile = opFolder+"_"+j;
+			var copFolder = "co"+i;
+			var copFile = copFolder+"_"+j;
 
-	const fs = require('fs')
+			var outputString = '';
+			var correctOutputString = '';
 
-	var outputString = "";
-	var correctOutputString = "";
+			fs.readFile('./././Outputs/'+opFolder+'/'+opFile, (err, data) => {
+                		if (err){
+					console.log(err);
+					return;
+				}
+                		outputString = data.toString();
+        		})
+			fs.readFile('./././correctOutputs/'+copFolder+'/'+copFile, (err, data) => {
+                		if (err){
+					console.log(err);
+					return;
+				}
+                		correctOutputString = data.toString();
+        		})
 
-	fs.readFile('./././Outputs/o1/o1_1.txt', (err, data) => {
-    		if (err) throw err;
-    		outputString = data.toString();
-	})
-
-	fs.readFile('./././correctOutputs/co1/co1_1.txt', (err, data) => {
-                if (err) throw err;
-		correctOutputString = data.toString();
-        })
+			var result = checkTestCase(outputString, correctOutputString);
+			console.log("Test Case "+j+" : "+result);
+			j++;
+		}
+		i++;
+	}
+}
+function checkTestCase(outputString, correctOutputString){
 
 	outputString = outputString.trim();
 	correctOutputString = correctOutputString.trim();
@@ -36,7 +58,7 @@ function checkTestCase(){
 		i++;
 	}
 
-	return "Test Case Passes";
+	return "Test Case Passed";
 }
 
 console.log(checkTestCase());
