@@ -10,7 +10,6 @@ function checkCodeCorrectness(i, j){
 
 	fs.readdir('./././Outputs/'+opFolder, (err, data) => {
 	if(err){
-		console.log(err);
 		return;
 	}
 	else{
