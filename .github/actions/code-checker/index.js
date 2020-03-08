@@ -8,7 +8,7 @@ function checkCodeCorrectness(i, j){
 	var copFolder = "co"+i;
 	var copFile = copFolder+"_"+j+".txt";
 
-	fs.readdir('./../../../Outputs/'+opFolder, (err, data) => {
+	fs.readdir('./././Outputs/'+opFolder, (err, data) => {
 	if(err){
 		console.log(err);
 		return;
