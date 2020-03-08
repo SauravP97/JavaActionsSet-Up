@@ -37,6 +37,7 @@ function cheeckCodeCorrectness(){
 		i++;
 	}
 }
+
 function checkTestCase(outputString, correctOutputString){
 
 	outputString = outputString.trim();
@@ -61,4 +62,4 @@ function checkTestCase(outputString, correctOutputString){
 	return "Test Case Passed";
 }
 
-console.log(checkTestCase());
+cheeckCodeCorrectness();
