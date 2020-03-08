@@ -19,7 +19,7 @@ function checkCodeCorrectness(i, j){
 		}
 		fs.readFile('./././Outputs/'+opFolder+'/'+opFile, (err, data) => {
 			if(err){
-				console.log(err);
+				checkCodeCorrectness(i+1,1);
 				return;
 			}
 			else{
@@ -27,7 +27,7 @@ function checkCodeCorrectness(i, j){
 				fs.readFile('./././correctOutputs/'+copFolder+'/'+copFile, (err1, data1) => {
 					if(err1){
 						console.log(err);
-						checkCodeCorrectness(i+1,1);
+						return;
 					}
 					else{
 						var correctOutputString = data1.toString();
