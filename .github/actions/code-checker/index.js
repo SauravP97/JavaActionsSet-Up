@@ -8,9 +8,9 @@ function cheeckCodeCorrectness(){
 		console.log('Checking For Problem '+i);
 		while(true){
 			var opFolder = "o"+i;
-			var opFile = opFolder+"_"+j;
+			var opFile = opFolder+"_"+j+".txt";
 			var copFolder = "co"+i;
-			var copFile = copFolder+"_"+j;
+			var copFile = copFolder+"_"+j+".txt";
 
 			var outputString = '';
 			var correctOutputString = '';
@@ -18,7 +18,7 @@ function cheeckCodeCorrectness(){
 			fs.readFile('./././Outputs/'+opFolder+'/'+opFile, (err, data) => {
                 		if (err){
 					console.log(err);
-					return;
+                                        return;
 				}
                 		outputString = data.toString();
         		})
@@ -29,6 +29,11 @@ function cheeckCodeCorrectness(){
 				}
                 		correctOutputString = data.toString();
         		})
+
+			if(correctOutputString.length == 0){
+				console.log('died');
+				return;
+			}
 
 			var result = checkTestCase(outputString, correctOutputString);
 			console.log("Test Case "+j+" : "+result);
