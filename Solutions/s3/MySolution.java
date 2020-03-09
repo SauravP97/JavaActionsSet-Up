@@ -13,7 +13,7 @@ class MySolution{
 			arr[i] = Integer.parseInt(strs1[i]);
 		}
 
-		Arrays.sort(arr);
+		//Arrays.sort(arr);
                 StringBuilder sb = new StringBuilder();
 
                 FileWriter writer = new FileWriter("../../Outputs/o3/o3_2.txt");  
