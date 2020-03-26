@@ -21,7 +21,6 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-    - uses: ./.github/actions/code-checker
       
     - name: A Testing Environment for Problem Solvers
       uses: SauravP97/test-prgramming-problems@1.0.1
